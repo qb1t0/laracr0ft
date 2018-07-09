@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a8a62faf9d54d7c93678c55d08cb68e",
+    "content-hash": "3ca0c84c921e207431850dc2d3dafa51",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -971,6 +971,53 @@
             "time": "2018-07-04T16:31:37+00:00"
         },
         {
+            "name": "postcss/postcss",
+            "version": "5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mlocati/postcss.git",
+                "reference": "a29c9f083f7a74ef5572d1c4a934b8294b42118f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mlocati/postcss/zipball/a29c9f083f7a74ef5572d1c4a934b8294b42118f",
+                "reference": "a29c9f083f7a74ef5572d1c4a934b8294b42118f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "react/promise": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PostCSS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michele Locati",
+                    "email": "mlocati@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Unifficial native PHP port of the PostCSS processor",
+            "homepage": "https://github.com/mlocati/postcss",
+            "keywords": [
+                "css",
+                "less",
+                "lesscss",
+                "postcss",
+                "sass",
+                "scss"
+            ],
+            "time": "2016-09-23T21:40:48+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -1265,6 +1312,52 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/f4edc2581617431aea50430749db55cc3fc031b3",
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2018-06-13T15:59:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

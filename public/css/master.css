@@ -1,0 +1,19 @@
+.top-bar {
+    overflow: hidden;
+    background-color: #383e43;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    font-family: 'Open-Sans', sans-serif;
+    /*text-align: center;*/
+    font-size: 1.2rem;
+    padding: 0;
+    margin-top: 5px;
+
+}
+
+.top-bar p{
+    margin: 10px;
+    margin-left: 10%;
+    font-weight: 700;
+}

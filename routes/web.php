@@ -21,6 +21,9 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/login', 'LoginController@getView');
+
+
 Route::get('about', 'AboutController');
 
 Route::get('contact', 'ContactController@view');
