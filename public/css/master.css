@@ -8,12 +8,39 @@
     /*text-align: center;*/
     font-size: 1.2rem;
     padding: 0;
-    margin-top: 5px;
-
+    color: snow;
+    z-index: 5;
 }
 
 .top-bar p{
     margin: 10px;
     margin-left: 10%;
     font-weight: 700;
+}
+
+body {
+    /*background-color: var(--bodyBackgroundColor);*/
+    /*background-color: linear-gradient(to bottom, #feef24, #eff1e3);*/
+    /*background: rgb(2,0,36);*/
+    /*background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,1) 100%);*/
+
+    /*background: rgb(127,130,255);*/
+    /*background: linear-gradient(0deg, rgba(127,130,255,1) 0%, rgba(163,194,255,1) 39%, rgba(0,255,239,1) 100%);*/
+
+    background: rgb(113,116,204);
+    background: linear-gradient(0deg, rgba(113,116,204,1) 0%, rgba(239,166,239,1) 2%, rgba(202,171,237,1) 24%, rgba(112,199,255,1) 80%, rgba(0,255,239,1) 100%);
+
+    color: var(--bodyColor);
+    font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+    font-size: var(--bodyFontSize);
+    font-weight: var(--bodyFontWeight);
+    height: 100%;
+    line-height: var(--bodyLineHeight);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.panel-info>.panel-heading{
+    background-color: #393e43;
+    color: snow;
 }

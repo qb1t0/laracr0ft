@@ -10,24 +10,28 @@
         @if(count($errors) > 0)
             <div class = "row">
                 <div class="errors">
-                        @foreach($errors->all() as $error)
-                            <div class = "errmsg">
-                                <p>{{ $error }}</p>
-                            </div>
-                        @endforeach
+                    {{--<ul>--}}
+                    @foreach($errors->all() as $error)
+                        <div class = "errmsg">
+                            <p>{{ $error }}</p>
+                        </div>
+                    @endforeach
+                    {{--</ul>--}}
                 </div>
             </div>
         @endif
-        <form action=" {{ route('login') }}" method="POST" class="form login">
+        <form action=" {{ route('signup') }}" method="POST" class="form login">
             @csrf
-            <div class="form-group row has-error">
-                <label for="inputError" id = "usr_icon">
+
+
+            <div class="form__field">
+                <label for="login__username" id = "usr_icon">
                     <svg class="icon">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
                     </svg>
                     <span class="hidden">Username</span>
                 </label>
-                <input id="login__username" type="text" name="email" class="form__input"  value="{{ Request::old('email') }}" placeholder="Email" required>
+                <input id="login__username" type="text" name="email" class="form__input" placeholder="Username" required>
             </div>
 
             <div class="form__field">
@@ -37,7 +41,7 @@
                     </svg>
                     <span class="hidden">Password</span>
                 </label>
-                <input id="login__password" type="password" name="password" class="form__input" value="{{ Request::old('password') }}" placeholder="Password" required>
+                <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
             </div>
 
             <div class="form__field">

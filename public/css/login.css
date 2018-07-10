@@ -72,6 +72,25 @@
     --bodyLineHeight: 1.5;
 }
 
+.errors{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.errmsg{
+    border: 1px solid #8f2626;
+    border-radius: 2.5%;
+    color: #720c0c;
+    font-size: 1.2rem;
+    padding: 2.4%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.errmsg p {
+    margin: 0;
+}
+
 * {
     box-sizing: inherit;
 }
@@ -164,6 +183,11 @@ input[type="submit"] {
     margin-bottom: 20px;
 }
 
+.form-group {
+    display: flex;
+    margin: var(--formFieldMargin);
+}
+
 .form__input {
     flex: 1;
 }
@@ -222,7 +246,7 @@ input[type="submit"] {
 .login input[type="text"]:focus,
 .login input[type="text"]:hover{
     background-color: var(--loginInputHoverBackgroundColor);
-    border: 1.2px solid #25282c;
+    border: 1px solid snow;
     color: snow;
 }
 
@@ -240,7 +264,7 @@ input[type="submit"] {
 
 /*background-opacity: 0.3 ;*/
     padding: 4px 0px 2px 0px;
-    border-radius: 4% 4% 2% 2%;
+    border-radius: 3% 3% 2% 2%;
     opacity: 0.9;
 }
 
