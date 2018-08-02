@@ -1,32 +1,4 @@
-.top-bar {
-    overflow: hidden;
-    background-color: #383e43;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    font-family: 'Open-Sans', sans-serif;
-    /*text-align: center;*/
-    font-size: 1.2rem;
-    padding: 0;
-    color: snow;
-    z-index: 5;
-}
-
-.top-bar p{
-    margin: 10px;
-    margin-left: 10%;
-    font-weight: 700;
-}
-
 body {
-    /*background-color: var(--bodyBackgroundColor);*/
-    /*background-color: linear-gradient(to bottom, #feef24, #eff1e3);*/
-    /*background: rgb(2,0,36);*/
-    /*background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,1) 100%);*/
-
-    /*background: rgb(127,130,255);*/
-    /*background: linear-gradient(0deg, rgba(127,130,255,1) 0%, rgba(163,194,255,1) 39%, rgba(0,255,239,1) 100%);*/
-
     background: rgb(113,116,204);
     background: linear-gradient(0deg, rgba(113,116,204,1) 0%, rgba(239,166,239,1) 2%, rgba(202,171,237,1) 24%, rgba(112,199,255,1) 80%, rgba(0,255,239,1) 100%);
 
@@ -38,9 +10,74 @@ body {
     line-height: var(--bodyLineHeight);
     margin: 0;
     min-height: 100vh;
+    padding-bottom: 70px;
+}
+
+header {
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+header hr{
+    margin-top: -0.9px;
+    border-style: dashed;
+    border-color: #393e43;
+}
+
+.top-bar {
+    overflow: hidden;
+    background-color: #383e43;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Open-Sans', sans-serif;
+    /*font-size: 1.2rem;*/
+    padding: 0;
+    color: snow;
+    z-index: 5;
+    margin-top: 5px;
+}
+
+.top-bar p{
+    margin: 10px;
+    margin-left: 11.7%;
+    font-weight: 700;
 }
 
 .panel-info>.panel-heading{
     background-color: #393e43;
     color: snow;
 }
+
+.invalid-feedback{
+    float: right;
+    color: darkred;
+}
+
+.dropdown-menu a.icon {
+    position: relative;
+    padding-left: 40px;
+}
+.dropdown-menu a.icon .glyphicon {
+    top: 6px;
+    left: 10px;
+    font-size: 18px;
+}
+
+.navbar{
+    margin-top: 5px;
+}
+
+.body-content{
+    margin-top: 60px;
+}
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:4px !important;
+    padding-bottom:0 !important;
+    height: 28px;
+    font-family: 'Open-Sans', sans-serif;
+    font-size: 1.2rem;
+}
+.navbar {min-height:28px !important;}

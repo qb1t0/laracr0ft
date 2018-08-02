@@ -11,39 +11,70 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-//Route::get('/', function () {
-//    return ('hello');
-//});
-
 Route::get('/', 'HomeController@index');
 
-Route::get('/login', 'LoginController@getLoginView');
 
-Route::get('/signup', 'LoginController@getSignupView');
+Route::middleware('guest', 'throttle:30,1')->group(function () {
+
+    Route::get('/login', function () {
+        return view('pages.login')->with(['data' => true]);
+    });
+
+    Route::post('/login', [
+        'uses' => 'UserController@postSignIn',
+        'as' => 'login'
+    ]);
+});
+
+Route::middleware('auth', 'throttle:30,1')->group(function () {
+
+    Route::get('/management', [
+        function () {
+            $u['usr'] = \Illuminate\Support\Facades\Auth::user();
+            $users = DB::table('users')->get();
+            return view('pages.management', compact('users'))->with(['p' => 0] );
+        }]);
+
+    Route::post('/management', [
+        'uses' => 'UserController@postSignUp',
+        'as' => 'management'
+    ]);
+
+    Route::get('/dashboard', [
+        'as' => 'dashboard',
+        function(){
+            return view('pages.dashboard')->with(['p' => 1]);
+        }
+    ]);
+
+    Route::post('/dashboard', [
+        'uses' => 'PostController@postCreatePost',
+        'as' => 'post.create',
+    ]);
+
+    Route::get('/logout', [
+        'uses' => 'UserController@getLogout',
+        'as' => 'logout'
+    ]);
+});
+
+
+//Route::get('/auth', function () {
+//    return view('pages.login');
+//});
+//
+//Route::post('/auth', [
+//    'uses' => 'UserController@postFastSignUp',
+//    'as' => 'login'
+//]);
+
 
 Route::get('about', 'AboutController');
 
+Route::get('/info', ['as' => 'info', 'uses' => 'UserController@getInfo'] );
+
 Route::get('contact', 'ContactController@view');
 
-Route::get('/dashboard', [
-    'uses' => 'DashboardController@getView',
-    'as' => 'dashboard',
-    'middleware' => 'auth'
-]);
-
-
-Route::post('/login', [
-    'uses' => 'UserController@postSignIn',
-    'as' => 'login'
-]);
-
-Route::post('/signup', [
-    'uses' => 'UserController@postSignUp',
-    'as' => 'signup'
-]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+

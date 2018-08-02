@@ -18,6 +18,15 @@
                 </div>
             </div>
         @endif
+        @if('data' == false)
+                <div class = "row">
+                    <div class="errors">
+                            <div class = "errmsg">
+                                <p>{{ "Cant find user with this auth information"}}</p>
+                            </div>
+                    </div>
+                </div>
+            @endif
         <form action=" {{ route('login') }}" method="POST" class="form login">
             @csrf
             <div class="form-group row has-error">
@@ -37,7 +46,7 @@
                     </svg>
                     <span class="hidden">Password</span>
                 </label>
-                <input id="login__password" type="password" name="password" class="form__input" value="{{ Request::old('password') }}" placeholder="Password" required>
+                <input id="login__password" type="password" name="password" class="form__input" value="{{ Request::old('password') }}" placeholder="Password">
             </div>
 
             <div class="form__field">
